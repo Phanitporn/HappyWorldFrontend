@@ -88,7 +88,7 @@
               <div>{{item.descrition}}</div>
             </v-card-text>
 
-            <v-divider class="mx-4"></v-divider>
+            <v-divider class="mx-5"></v-divider>
 
             <v-card-actions>
               <router-link to="/Signin" style="text-decoration: none">
