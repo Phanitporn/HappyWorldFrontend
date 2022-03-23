@@ -52,8 +52,15 @@
       </div>
       <section class="content">
         <v-row >
-          <!--item 1-->
-          <v-card  v-for="item in producthome" :key="item.id" class="mx-auto my-12" max-width="350px">
+          <v-col cols="2"> </v-col>
+          <v-col cols="8"> </v-col>
+          <v-col cols="2"> </v-col>
+          <v-card
+            v-for="item in producthome"
+            :key="item.id"
+            class="mx-auto my-12"
+            max-width="350px"
+          >
             <template slot="progress">
               <v-progress-linear
                 color="deep-purple"
@@ -62,12 +69,9 @@
               ></v-progress-linear>
             </template>
 
-            <v-img
-              height="250"
-              :src= "item.image"
-            ></v-img>
+            <v-img height="250" :src="item.image"></v-img>
 
-            <v-card-title>{{item.name}}</v-card-title>
+            <v-card-title>{{ item.name }}</v-card-title>
 
             <v-card-text>
               <v-row align="center" class="mx-0">
@@ -83,9 +87,11 @@
                 <div class="grey--text ms-4 my-3">4.5 (413)</div>
               </v-row>
 
-              <div class="my-4 text-subtitle-1">{{item.price}}$ • Cakes, Cafe</div>
+              <div class="my-4 text-subtitle-1">
+                {{ item.price }}$ • {{ item.category }}, Cafe
+              </div>
 
-              <div>{{item.descrition}}</div>
+              <div>{{ item.descrition }}</div>
             </v-card-text>
 
             <v-divider class="mx-4"></v-divider>
@@ -164,7 +170,11 @@ img {
   /* font-size: 30px; */
   margin-right: 700px;
 }
-#homefoot{
+#homefoot {
   margin-bottom: 50vh;
+}
+.content{
+  width: 60%;
+  margin: auto;
 }
 </style>
